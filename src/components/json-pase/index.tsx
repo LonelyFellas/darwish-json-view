@@ -14,12 +14,8 @@ const JsonParse = ({
   data: any;
   initExtend?: boolean;
 }) => {
-  const indentRef = useRef<Darwish.ElementRef<'span'>>(null);
   const [extendObj, setExtendObj] = useState(initExtend);
   const keyValueArr = Object.entries(data);
-  useEffect(() => {
-    console.log(indentRef);
-  }, [indentRef.current]);
   return (
     <>
       {!extendObj ? (
@@ -36,18 +32,14 @@ const JsonParse = ({
               >
                 {extendObj ? '➖' : '➕'}
               </span>
-              <span className={style.text_font} ref={indentRef}>
-                {'{'}
-              </span>
+              <span className={style.text_font}>{'{'}</span>
               {keyValueArr.map((item, key) => {
                 return (
                   <div
                     className={style.sing_line}
                     key={key}
                     style={{
-                      marginLeft: indentRef.current
-                        ? indentRef.current.offsetWidth + 25 + 'px'
-                        : '0px',
+                      marginLeft: 40 + 'px',
                     }}
                   >
                     <StringView str={item[0]} />
@@ -74,9 +66,9 @@ const JsonParse = ({
                         ) : (
                           <>{item[1] + ''}</>
                         )}
+                        <CommaCharView {...{ key, len: keyValueArr.length }} />
                       </span>
                     )}
-                    <CommaCharView {...{ key, len: keyValueArr.length }} />
                   </div>
                 );
               })}
