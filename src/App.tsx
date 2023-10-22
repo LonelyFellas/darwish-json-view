@@ -1,6 +1,4 @@
 import { useState } from 'react';
-import reactLogo from './assets/react.svg';
-import viteLogo from '/vite.svg';
 import JsonParse from './components/json-pase';
 import './App.css';
 import Splitter from './components/splitter';

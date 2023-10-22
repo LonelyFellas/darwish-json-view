@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect } from 'react';
 import style from './index.module.css';
-import Darwish, { useLocalStorage } from 'darwish';
+import Darwish from 'darwish';
 
 enum COLOR_ENUM {
   string = 'rgb(94, 179, 86)',
@@ -145,3 +145,4 @@ const CommaCharView = ({ key, len }: { key: number; len: number }) => {
     </span>
   );
 };
+// const ExtendTypeofData = () => {};
