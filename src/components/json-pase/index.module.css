@@ -1,0 +1,51 @@
+.sing_line {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  
+}
+.text_font {
+  font-weight: 600;
+  color: #5d5858;
+}
+.text_number {
+  font-weight: 600;
+  color: rgb(243, 243, 7);
+}
+.text_prop {
+  font-weight: 700; 
+  color: rgb(135, 48, 139);
+}
+.text_eil {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  height: 12px;
+  padding-bottom: 2px;
+  box-sizing: border-box;
+  background-color: rgb(128, 128, 128, 0.4);
+  border-radius: 2px;
+  cursor: pointer;
+  margin: 0 2px;
+  user-select: none;
+  &:active {
+    color: white;
+    background-color: rebeccapurple;
+  }
+}
+.icon_extend {
+  cursor: pointer;
+  user-select: none;
+  display: inline-block;
+  height: 18px;
+  width: 18px;
+  margin-right: 5px;
+  border-radius: 2px;
+  line-height: 18px;
+  &:active {
+    background-color: rebeccapurple;
+  }
+  margin-bottom: -2px;
+}
